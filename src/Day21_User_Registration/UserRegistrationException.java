@@ -7,6 +7,7 @@ public class UserRegistrationException {
 
 	Scanner sc = new Scanner(System.in);
 
+	// Method for first name
 	public boolean firstName(String fName) {
 		boolean check = Pattern.matches("^[A-Z]{1}+[a-z]{3,}", fName);
 		try {
@@ -22,6 +23,7 @@ public class UserRegistrationException {
 		return false;
 	}
 
+	// Method for last name
 	public boolean lastName(String lName) {
 		boolean check = Pattern.matches("^[A-Z]{1}+[a-z]{3,}", lName);
 		try {
@@ -37,6 +39,7 @@ public class UserRegistrationException {
 		return false;
 	}
 
+	// Method for email
 	public boolean eMail(String eMail) {
 		boolean check = Pattern.matches("^[a-z0-9]*[.]?[a-z0-9]*@[a-z]*[.][a-z]{3}", eMail);
 		try {
@@ -52,6 +55,7 @@ public class UserRegistrationException {
 		return false;
 	}
 
+	// Method for phone number which starts with 91
 	public boolean mobileNum(String mNum) {
 		boolean check = Pattern.matches("^91\\s[6789][0-9]{9}", mNum);
 		try {
@@ -151,7 +155,6 @@ public class UserRegistrationException {
 	}
 
 	public static void main(String[] args) {
-		// refer above methods in Junit Testing.
 
 	}
 }
